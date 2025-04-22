@@ -1,0 +1,360 @@
+/* // Exemplo
+exemplo do curso retornou erro então busquei soluções com o GPT até encontrar este e achar mais viável.
+
+import java.util.Scanner;
+
+public class MaiorDeDoisNumeros {
+
+    public static void main(String[] args) {
+        double n1, n2;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        n1 = scanner.nextDouble();
+
+        System.out.print("Digite o segundo número: ");
+        n2 = scanner.nextDouble();
+
+        if (n1 > n2)
+            System.out.printf("Maior número: %.2f\n", n1);
+        else if (n2 > n1)
+            System.out.printf("Maior número: %.2f\n", n2);
+        else
+            System.out.println("Os números são iguais.");
+
+        scanner.close();
+    }
+} */
+/* // Exercicio 1
+/*import java.util.Scanner;
+
+public class DiferencaDoMaiorParaMenor {
+	public static void main (String[] args) {
+		int n1, n2, res;
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Este programa visa trazer a diferença entre \no MAIOR número contra o MENOR número fornecido.");
+		
+		System.out.println("\nEntre com o primeiro número: ");
+		n1 = scanner.nextInt();
+		
+		System.out.println("\nEntre com o segundo número: ");
+		n2 = scanner.nextInt();
+		
+		if(n1 == n2)
+			System.out.println("Os números são iguais. Diferença de 0!");
+		else if(n1 > n2) {
+			res = (n1 - n2);
+			System.out.printf("A difença é de: %d\n", res);
+		}
+		else {
+			res = n2 - n1;
+			System.out.printf("A difença é de: %d\n", res);
+		}
+	}
+}
+//Finalmente consegui terminar kkk.
+
+// Exercício 2 */
+
+/* // Exercício 2
+
+import java.util.Scanner;
+
+public class AcerteAFaixa {
+	public static void main(String[] args) {
+		int n;
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Tende adivinhar a faixa de valor que estou pensando! ;)");
+		n = scanner.nextInt();
+		
+		if (n >= 1 && n <= 9)
+			System.out.println("O valor está dentro da faixa permitida. ;)");
+		else 
+			System.out.println("O valor está fora da faixa permitida. :'( ");
+		
+		scanner.close();
+	}
+}
+
+//Agora se tornou mais fácil quando começa a entender a sintaxe. */
+
+/* // Exercício 3
+
+import java.util.Scanner;
+
+public class Baskara {
+	public static void main (String[] args){
+		int a, b, c, delta;
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Este programa vai te informar quantas \nraízes existem com base no seu Delta.");
+		System.out.println("\nPor favor, entre com o valor de A: ");
+		a = scanner.nextInt();
+		System.out.println("Por favor, entre com o valor de B: ");
+		b = scanner.nextInt();
+		System.out.println("Por favor, entre com o valor de C: ");
+		c = scanner.nextInt();
+		
+		delta = ((b*b)-(4*a*c));
+		
+		if (delta < 0)
+			System.out.println("A equação não possuí raízes reais.");
+		else if (delta > 0)
+			System.out.println("A equação possui duas raízes reais.");
+		else
+			System.out.println("A equação possui uma única raiz real.");
+		
+		scanner.close();
+	}
+} */
+
+/* // Exercício 4
+
+import java.util.Scanner;
+
+public class PossivelTriangulo {
+	public static void main(String[] args) {
+		int a, b, c, res1, res2, res3;
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("\n Vamos descobrir se é possível criar um triangulo \n com as medidas fornecidas por ti...");
+		
+		System.out.println("\n Por favor, nos forneca o valor de A: ");
+		a = scanner.nextInt();
+		System.out.println("\n Por favor, nos forneca o valor de B: ");
+		b = scanner.nextInt();
+		System.out.println("\n Por favor, nos forneca o valor de C: ");
+		c = scanner.nextInt();
+		
+		res1 = ((a+b)-c);
+		res2 = ((a+c)-b);
+		res3 = ((b+c)-a);
+		
+		if (res1 <= 0 || res2 <=0 || res3 <=0) 
+			System.out.println("Não é possível criar um triangulo com esses lados fornecidos.");
+		else
+			System.out.println("\nShow e bola, habemos triangulo!");
+		
+		scanner.close();
+	}
+} */
+
+/* // Exercício 5
+ 
+ import java.util.Scanner;
+ 
+ public class DivisivelPor2ou3 {
+	 
+ public static void main(String[] args) {
+	 int v1, v2, v3, v4;
+	 Scanner scanner = new Scanner(System.in);
+	 
+	 System.out.print("\nVamos ver se os números que você vai nos informar são divisíveis por 2 ou 3.");
+	 System.out.println("\nPor favor, insira o primeiro número: \n");
+		v1 = scanner.nextInt();
+			if ( v1 <= 1 ) {
+				System.out.println("O número é inválido para esse tipo de teste.");
+			}
+			else if ( v1 %3 == 0 && v1 %2 == 0 ) {
+				System.out.println("O número é divisível por 2 e 3!");
+			}
+			else if ( v1 %2 == 0 )  {
+				System.out.println("O número é divisível por 2!");
+			}
+			else if ( v1 %3 == 0 )  {
+				System.out.println("O número é divisível por 3!");
+			}
+			else {
+				System.out.println("O número não é divisível por 2 nem 3!");
+			}
+		System.out.println("\nPor favor, insira o segundo número: \n");
+		v2 = scanner.nextInt();
+			if ( v2 <= 1 ) {
+				System.out.println("O número é inválido para esse tipo de teste.");
+			}
+			else if ( v2 %3 == 0 && v2 %2 == 0 ) {
+				System.out.println("O número é divisível por 2 e 3!");
+			}
+			else if ( v2 %2 == 0 )  {
+				System.out.println("O número é divisível por 2!");
+			}
+			else if ( v2 %3 == 0 )  {
+				System.out.println("O número é divisível por 3!");
+			}
+			else {
+				System.out.println("O número não é divisível por 2 nem 3!");
+			}
+		System.out.println("\nPor favor, insira o terceiro número: \n");
+		v3 = scanner.nextInt();
+			if ( v3 <= 1 ) {
+				System.out.println("O número é inválido para esse tipo de teste.");
+			}
+			else if ( v3 %3 == 0 && v3 %2 == 0 ) {
+				System.out.println("O número é divisível por 2 e 3!");
+			}
+			else if ( v3 %2 == 0 )  {
+				System.out.println("O número é divisível por 2!");
+			}
+			else if ( v3 %3 == 0 )  {
+				System.out.println("O número é divisível por 3!");
+			}
+			else {
+				System.out.println("O número não é divisível por 2 nem 3!");
+			}
+		System.out.println("\nPor favor, insira o quarto número: \n");
+		v4 = scanner.nextInt();
+			if ( v4 <= 1 ) {
+				System.out.println("O número é inválido para esse tipo de teste.");
+			}
+			else if ( v4 %3 == 0 && v4 %2 == 0 ) {
+				System.out.println("O número é divisível por 2 e 3!");
+			}
+			else if ( v4 %2 == 0 )  {
+				System.out.println("O número é divisível por 2!");
+			}
+			else if ( v4 %3 == 0 )  {
+				System.out.println("O número é divisível por 3!");
+			}
+			else {
+				System.out.println("O número não é divisível por 2 nem 3!");
+			}			
+		}
+	}
+// finally ficou feio mas funcionou. */
+/* // Exercício 6 Eu fiz uma mescla e ficou apenas o 5! 
+*/
+ 
+/* // Exercício 7
+ import java.util.Scanner;
+ 
+ public class QualOMaiorNumero {
+	 
+	 public static void main(String[] args) {
+		 int v1, v2, v3;
+		 Scanner scanner = new Scanner(System.in);
+		 
+		 System.out.print("Esse programa ira lhe retornar o maior \nnúmero dentre os 3 que você informar.");
+		 System.out.println("Entre com o primeiro número: ");
+		 v1 = scanner.nextInt();
+		 System.out.println("Entre com o segundo número: ");
+		 v2 = scanner.nextInt();
+		 System.out.println("Entre com o terceiro número: ");
+		 v3 = scanner.nextInt();
+		 
+		 if (v1 > v2 && v1 > v3) {
+			 System.out.printf("O maior número é: %d", v1);
+		 }
+		 if (v2 > v1 && v2 > v3) {
+			 System.out.printf("O maior número é: %d", v2);
+		 }
+		 if (v3 > v1 && v3 > v2) {
+			 System.out.printf("O maior número é: %d", v3);
+		 }
+		 else if (v3 == v2 && v2 == v1) {
+			 System.out.printf("Eles são todos iguais! :p");
+		 }
+		 scanner.close();
+	 }
+ } */
+ 
+/* // Exercício 8 precisei apenas alterar a variavel.
+ import java.util.Scanner;
+ 
+ public class QualOMenorNumero {
+	 
+	 public static void main(String[] args) {
+		 int v1, v2, v3;
+		 Scanner scanner = new Scanner(System.in);
+		 
+		 System.out.print("Esse programa ira lhe retornar o menor \nnúmero dentre os 3 que você informar.");
+		 System.out.println("Entre com o primeiro número: ");
+		 v1 = scanner.nextInt();
+		 System.out.println("Entre com o segundo número: ");
+		 v2 = scanner.nextInt();
+		 System.out.println("Entre com o terceiro número: ");
+		 v3 = scanner.nextInt();
+		 
+		 if (v1 < v2 && v1 < v3) {
+			 System.out.printf("O menor número é: %d", v1);
+		 }
+		 if (v2 < v1 && v2 < v3) {
+			 System.out.printf("O menor número é: %d", v2);
+		 }
+		 if (v3 < v1 && v3 < v2) {
+			 System.out.printf("O menor número é: %d", v3);
+		 }
+		 else if (v3 == v2 && v2 == v1) {
+			 System.out.printf("Eles são todos iguais! :p");
+		 }
+		 scanner.close();
+	 }
+ }  */
+ 
+/*  // Exercício 9
+ import java.util.Scanner;
+ 
+ public class AumentoSalarial {
+	 public static void main(String[] args) {
+		 double base, aumento, total;
+		 Scanner scanner = new Scanner(System.in);
+		 
+		 System.out.print("Saiba qual será seu novo salário.");
+		 System.out.println("\nEntre com seu salário base atual: ");
+		 
+		 base = scanner.nextDouble();
+		 
+		 if (base < 5000) {
+			 System.out.print("\nVocê nãotem direito ao ajuste salarial.");
+		 }
+		 else {
+			 aumento = ((base * 1.3)-base);
+			 total = base * 1.3;
+			 System.out.printf("Você terá um ajuste no valor de: %.2f\n", aumento);
+			 System.out.printf("Totalizando um salário de: %.2f\n", total);
+			 
+		 }
+		 scanner.close();
+	 }
+ }
+  */
+  
+/*   // Exercício 10
+  
+  import java.util.Scanner;
+  
+  public class ConsultorDeAprovacao {
+	  public static void main (String[] args) {
+		  double lab, sem, fin, media;
+		  Scanner scanner = new Scanner(System.in);
+		  
+		  System.out.print("Vamos ver se você será aprovado???\nEntre com suas notas para descobrirmos..");
+		  System.out.print("\nEntre com sua nota do Trabalho de Laboratório por favor: ");
+		  lab = scanner.nextDouble();
+		  System.out.print("\nAgora entre com sua nota da Avaliação Semestral por favor: ");
+		  sem = scanner.nextDouble();
+		  System.out.print("\nPor fim, entre com a nota do Exame Final por favor: ");
+		  fin = scanner.nextDouble();
+		  
+		  media = ((lab * 0.2)+(sem * 0.3)+(fin * 0.5));
+		  
+		  if (media >= 8 && media <= 10) {
+			  System.out.printf("Você foi aprovado com CONCEITO A, nota final de: %.1f\n", media);
+		  }
+		  if (media >= 7 && media < 8) {
+			  System.out.printf("Você foi aprovado com CONCEITO B, nota final de: %.1f\n", media);
+		  }
+		  if (media >= 6 && media < 7) {
+			  System.out.printf("Você foi aprovado com CONCEITO C, nota final de: %.1f\n", media);
+		  }
+		  if (media >= 5 && media < 6) {
+			  System.out.printf("Você foi reprovado com CONCEITO D, nota final de: %.1f\n", media);
+		  }
+		  if (media >= 0 && media < 5) {
+			  System.out.printf("Você foi aprovado com CONCEITO F, nota final de: %.1f\n", media);
+		  }
+		  
+		  scanner.close();
+	  }
+  } */
